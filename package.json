@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-test-address-validator"
+    "url": "https://github.com/digitalbazaar/bedrock-address-credential-issuer"
   },
   "keywords": [
     "bedrock"
@@ -19,9 +19,9 @@
     "url": "http://digitalbazaar.com"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/bedrock-test-address-validator/issues"
+    "url": "https://github.com/digitalbazaar/bedrock-address-credential-issuer/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/bedrock-test-address-validator",
+  "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
   "peerDependencies": {
     "bedrock": "~0.3.0"
   },
