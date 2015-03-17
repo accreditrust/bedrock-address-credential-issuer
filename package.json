@@ -1,8 +1,8 @@
 {
-  "name": "bedrock-session-mongodb",
+  "name": "bedrock-address-credential-issuer",
   "version": "0.1.2-dev",
-  "description": "Bedrock session mongodb module",
-  "main": "index.js",
+  "description": "Bedrock address credential issuer",
+  "main": "./lib/addressCredentialIssuer",
   "scripts": {
     "test": "node index.js test"
   },
@@ -22,14 +22,11 @@
     "url": "https://github.com/digitalbazaar/bedrock-address-credential-issuer/issues"
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
-  "dependencies": {
-    "bedrock-test-address-validator"
-  },
+
   "peerDependencies": {
     "bedrock": "~0.3.0"
   },
   "directories": {
     "lib": "./lib"
-  },
-  "main": "./lib/addressCredentialIssuer"
+  }
 }
