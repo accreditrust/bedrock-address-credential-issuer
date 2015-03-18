@@ -22,11 +22,15 @@
     "url": "https://github.com/digitalbazaar/bedrock-address-credential-issuer/issues"
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
-
   "peerDependencies": {
-    "bedrock": "~0.3.0"
+    "bedrock": "~0.3.0",
+    "bedrock-express": "~0.2.0"
   },
   "directories": {
     "lib": "./lib"
+  },
+  "devDependencies": {
+    "should": "^5.2.0",
+    "superagent": "~0.21.0"
   }
 }
