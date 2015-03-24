@@ -1,0 +1,22 @@
+{
+  "name": "bedrock-address-credential-issuer",
+  "main": "components/address",
+  "version": "0.0.0",
+  "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
+  "description": "Provides interface to verify address.",
+  "ignore": [
+    "bower_components",
+    "index.js",
+    "lib",
+    "node_modules",
+    "package.json",
+  ],
+  "dependencies": {
+      "bedrock-angular": "~0.1.0"
+  },
+  "keywords": [
+    "address",
+    "credential",
+    "bedrock"
+  ]
+}
