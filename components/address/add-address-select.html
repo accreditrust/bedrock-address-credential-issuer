@@ -1,0 +1,26 @@
+<p ng-show="!validatedAddress.sysValidated">
+  We ran your address through an address validation service, but it could
+  not be validated. You may still use the address you entered, but if you
+  would like to make changes please click "Back" below.
+</p>
+<p ng-show="validatedAddress.sysValidated">
+  We have run your address through an address validation service. If the
+  validated address looks ok, please click "Add" to continue. If the
+  validated address does not match the address you entered, then you may
+  click on the one you entered to select it instead.
+</p>
+
+<div class="section" ng-show="validatedAddress.sysValidated">
+  <h4 class="headline">Validated Address</h4>
+  <div class="br-item-hover well unselectable" ng-class="{'item-selected': selection.address == validatedAddress}" ng-click="selection.address=validatedAddress"
+    ng-dblclick="add(validatedAddress)">
+    <div ps-address-view="validatedAddress"></div>
+  </div>
+</div>
+<div class="section">
+  <h4 class="headline">Entered Address</h4>
+  <div class="br-item-hover well unselectable" ng-class="{'item-selected': selection.address == originalAddress}" ng-click="selection.address=originalAddress"
+    ng-dblclick="add(originalAddress)">
+    <div ps-address-view="originalAddress"></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="close stackable-cancel">&times;<span class="sr-only">Close</span></a>
+        <h3 class="modal-title">New Address</h3>
+      </div>
+      <div class="modal-body" ng-switch="state">
+        <div ng-include="'/app/components/util/demo-warning.html'"></div>
+        <div ng-switch-when="editing">
+          <div ng-include="'/app/components/address/add-address-edit.html'"></div>
+        </div>
+        <div ng-switch-when="selecting">
+          <div ng-include="'/app/components/address/add-address-select.html'"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span ng-show="loading">
+          <i class="fa fa-refresh fa-spin text-muted"></i>
+        </span>
+        <span ng-show="state == 'editing'">
+          <button type="button" class="btn btn-primary btn-validate"
+            ng-disabled="loading"
+            ng-click="validate()">Validate</button>
+          <button type="button" class="btn btn-default stackable-cancel">Cancel</button>
+        </span>
+        <span ng-show="state == 'selecting'">
+          <button type="button" class="btn btn-primary" ng-click="add()"
+            ng-disabled="loading || !selection.address"><i class="fa fa-check"></i> Add</button>
+          <button type="button" class="btn btn-default"
+            ng-disabled="loading"
+            ng-click="edit()">Back</button>
+        </span>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

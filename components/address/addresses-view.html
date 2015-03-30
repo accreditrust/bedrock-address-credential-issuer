@@ -1,0 +1,85 @@
+<div class="section section-addresses" ng-controller="AddressesController as model">
+  <br-headline br-title="Addresses" br-loading="model.state.loading">
+    <ul class="stackable-menu dropdown-menu">
+      <li>
+        <a class="stackable-cancel" ng-click="model.modals.showAddAddress=true"><i class="fa fa-plus"></i> Add Address</a>
+      </li>
+    </ul>
+  </br-headline>
+  <table class="table table-condensed" ng-show="model.state.loading || model.addresses.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th class="br-action">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="address in model.addresses | orderBy:'label'">
+        <!-- Name -->
+        <td>
+          <span>{{address.label}}</span>
+        </td>
+        <!-- Address -->
+        <td>
+          <span ps-address-view="address" ps-no-label="true"></span>
+        </td>
+        <!-- Action -->
+        <td class="br-action">
+          <br-action-menu>
+            <ul class="dropdown-menu stackable-menu">
+              <li>
+                <a class="stackable-cancel" ng-click="model.editAddress(address)">
+                  <i class="fa fa-pencil"></i> Edit
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li class="alert-danger">
+                <a class="stackable-cancel" ng-click="model.deleteAddress(address)">
+                  <i class="fa fa-times"></i> Delete
+                </a>
+              </li>
+            </ul>
+          </br-action-menu>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-show="!model.state.loading && model.addresses.length == 0">
+    <p class="text-center">You have no addresses associated with this identity.</p>
+
+    <div class="text-center alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <strong>Warning!</strong>
+      Without any addresses you are unable to buy or sell with this
+      identity.
+    </div>
+  </div>
+  <stackable-modal stackable="model.modals.showAddAddress">
+    <div ci-add-address-modal></div>
+  </stackable-modal>
+  <stackable-modal stackable="model.modals.showEditAddress">
+    <div ci-edit-address-modal ps-address="model.modals.address"></div>
+  </stackable-modal>
+
+  <!-- Removing last address alert -->
+  <stackable-modal stackable="model.modals.showDeleteAddressAlert"
+    stackable-closed="model.confirmDeleteAddress(err, result)">
+    <div br-alert-modal
+      br-modal-header="Warning"
+      br-modal-ok="Remove"
+      br-modal-cancel="Cancel">
+      <div class="alert alert-warning" ng-show="model.addresses.length == 1">
+        <strong>Warning!</strong>
+        Removing your last address will immediately prevent you from buying
+        or selling with this identity. If you choose to remove your last
+        address, you can re-enable buying and selling by adding a new
+        address.
+      </div>
+      <p>Are you sure that you want to remove this address?</p>
+      <div class="well">
+        <div ps-address-view="model.addressToDelete"></div>
+      </div>
+    </div>
+  </stackable-modal>
+</div>

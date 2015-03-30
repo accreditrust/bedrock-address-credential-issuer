@@ -1,0 +1,24 @@
+<br-selector br-selected="selected=brSelector.selected" ci-address-selector-inner>
+  <div name="br-selector-selected" br-lazy-compile="selected" br-lazy-id="ci-address-selector-selected">
+    <span ng-show="model.services.address.loading">
+      <i class="fa fa-refresh fa-spin text-muted"></i>
+    </span>
+    <div ng-hide="model.services.address.loading" ps-address-view="selected"></div>
+  </div>
+  <div name="br-selector-choices" br-lazy-compile="brSelector.showChoices" br-lazy-id="ci-address-selector-choices">
+    <div ng-show="model.services.address.loading">
+      <i class="fa fa-refresh fa-spin text-muted"></i>
+    </div>
+    <ul ng-hide="model.services.address.loading" class="list-unstyled">
+      <li class="br-item-hover well" ng-repeat="address in model.addresses"
+        ng-click="brSelector.select(address)">
+        <div ng-hide="model.services.address.loading" ps-address-view="address"></div>
+      </li>
+    </ul>
+  </div>
+</br-selector>
+<stackable-modal stackable="model.showAddAddressModal"
+  stackable-closed="!err && brSelector.select(result)"
+  br-lazy-compile="model.showAddAddressModal" br-lazy-id="ci-address-selector-add-modal">
+  <div ci-add-address-modal></div>
+</stackable-modal>
