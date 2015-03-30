@@ -9,7 +9,7 @@
     "index.js",
     "lib",
     "node_modules",
-    "package.json",
+    "package.json"
   ],
   "dependencies": {
       "bedrock-angular": "~0.1.0"
