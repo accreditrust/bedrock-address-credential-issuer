@@ -16,7 +16,7 @@ function factory() {
     restrict: 'E',
     replace: true,
     templateUrl: requirejs.toUrl(
-      'bedrock-address-credential-issuer/components/address/' + 
+      'bedrock-address-credential-issuer/components/address/' +
       'addresses-view.html')
   };
 }

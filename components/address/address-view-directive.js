@@ -16,7 +16,7 @@ function factory() {
       noLabel: '=?psNoLabel'
     },
     templateUrl: requirejs.toUrl(
-      'bedrock-address-credential-issuer/components/address/' + 
+      'bedrock-address-credential-issuer/components/address/' +
       'address-view.html')
   };
 }

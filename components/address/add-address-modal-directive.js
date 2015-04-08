@@ -14,8 +14,8 @@ function factory(brAlertService, brIdentityService, config, ciAddressService) {
     scope: {},
     require: '^stackable',
     templateUrl: requirejs.toUrl(
-      'bedrock-address-credential-issuer/components/address/' + 
-      'add-address-modal.html')
+      'bedrock-address-credential-issuer/components/address/' +
+      'add-address-modal.html'),
     link: Link
   };
 

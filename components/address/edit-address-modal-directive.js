@@ -13,8 +13,8 @@ function factory(ciAddressService, brAlertService, config) {
     scope: {sourceAddress: '=psAddress'},
     require: '^stackable',
     templateUrl: requirejs.toUrl(
-      'bedrock-address-credential-issuer/components/address/' + 
-      'edit-address-modal.html')
+      'bedrock-address-credential-issuer/components/address/' +
+      'edit-address-modal.html'),
     link: Link
   };
 

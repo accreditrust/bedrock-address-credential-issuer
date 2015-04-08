@@ -53,7 +53,7 @@ function addressSelector() {
       fixed: '=?psFixed'
     },
     templateUrl: requirejs.toUrl(
-      'bedrock-address-credential-issuer/components/address/' + 
+      'bedrock-address-credential-issuer/components/address/' +
       'address-selector.html')
   };
 }
