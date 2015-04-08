@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
   "peerDependencies": {
-    "bedrock": "~0.3.0",
-    "bedrock-express": "~0.2.0"
+    "bedrock": "^1.0.0",
+    "bedrock-express": "^1.0.0"
   },
   "directories": {
     "lib": "./lib"

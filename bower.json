@@ -1,12 +1,12 @@
 {
   "name": "bedrock-address-credential-issuer",
+  "version": "0.0.0",
+  "description": "Provides interface to verify address.",
   "moduleType": [
     "amd"
   ],
   "main": "components/address/address.js",
-  "version": "0.0.0",
   "homepage": "https://github.com/digitalbazaar/bedrock-address-credential-issuer",
-  "description": "Provides interface to verify address.",
   "ignore": [
     "bower_components",
     "index.js",
@@ -15,10 +15,10 @@
     "package.json"
   ],
   "dependencies": {
-    "bedrock-angular": "~0.1.0",
-    "bedrock-angular-alert": "~0.1.0",
     "angular-stackables": "~0.0.30",
-    "forge": "~0.6.21"
+    "bedrock-angular": "^1.0.0",
+    "bedrock-angular-alert": "^1.0.0",
+    "forge": "~0.6.22"
   },
   "keywords": [
     "address",
@@ -26,6 +26,6 @@
     "bedrock"
   ],
   "resolutions": {
-    "angular": "~1.3.10"
+    "angular": "~1.3.15"
   }
 }
